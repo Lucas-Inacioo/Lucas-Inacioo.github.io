@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <title>My GitHub Profile</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 
 <body>
@@ -13,9 +13,12 @@
         <div class="container">
             <nav>
                 <ul class="list-unstyled">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="projects.html">Projects</a></li>
-                    <li><a href="about.html">About</a></li>
+                    <li><a href="index.html" data-i18n="home_button"></a></li>
+                    <li><a href="projects.html" data-i18n="projects_button"></a></li>
+                    <li><a href="about.html" data-i18n="about_me_button"></a></li>
+                    <li><a href="index.html" onclick="changeLanguage('en')">English</a></li>
+                    <li><a href="index.html" onclick="changeLanguage('pt')">Portuguese</a></li>
+
                 </ul>
             </nav>
         </div>
@@ -28,8 +31,11 @@
         </nav>
     </div>
 
-    <div class="fixed-footer text-center"> <!-- Added "text-center" class -->
+    <div class="fixed-footer text-center"> 
         <p><a class="number">2024</a> My GitHub Profile.</p>
     </div>
+
+    <script src="./scripts/script.js"></script> 
+
 </body>
 </html>
