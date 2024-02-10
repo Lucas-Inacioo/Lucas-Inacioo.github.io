@@ -1,74 +1,74 @@
-.number {
-    font-weight: bold;
-    font-size: 16px;
-    color: red;
-}
-
-.fixed-header, .fixed-footer{
+.fixed-header, .fixed-footer {
     width: 100%;
-    position: fixed;        
+    position: fixed;
     background: #333;
-    padding: 10px 0;
     color: #fff;
+    z-index: 1050;
 }
 
-.fixed-header{
+.fixed-header {
     top: 0;
+    padding: 10px 0;
 }
 
-.fixed-footer{
+.fixed-footer {
     bottom: 0;
+    padding: 10px 0;
 }
 
-body{        
-    padding-top: 17vh;
-    padding-bottom: 40px;
+body {
+    padding-top: 60px;
+    padding-bottom: 50px;
+    margin: 0;
 }
 
-.container{
-    width: 80%;
-    margin: 0 auto;
+.container {
+    width: 90%;
+    margin: auto;
+    max-width: 1140px;
 }
 
 .list-unstyled {
-    text-decoration: none;
-    color: inherit;
+    padding-left: 0;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 0;
 }
 
 .list-unstyled li {
-    list-style-type: none;
-    display: inline-block;
-    margin-right: 10px;
+    padding: 10px;
 }
 
-ul.list-unstyled {
-    display: flex;
-    margin-top: 0;
-    padding-left: 0;
-}
-
-ul.list-unstyled li {
-    margin-right: 10px;
-    border-radius: 5px;
-    background-color: #f0f0f0;
-    padding: 5px 10px;
-    display: inline-block;
-    flex: 1;
-    text-align: center;
-}
-
-ul.list-unstyled li a {
+.list-unstyled li a {
+    color: #fff;
     text-decoration: none;
-    color: black;
-    width: 100%;
-    display: block
+    display: block;
 }
 
 .language-selector {
-    position: fixed;
-    right: 20px;
-    top: 10px;
     cursor: pointer;
+}
+
+.selected-flag {
+    width: 30px;
+    height: auto;
+}
+
+.overlay-content a img {
+    width: 240px; 
+    height: auto;
+}
+
+@media (max-width: 768px) {
+    .list-unstyled {
+        flex-direction: column;
+    }
+
+    .container {
+        width: 100%;
+    }
 }
 
 .language-overlay {
@@ -82,31 +82,21 @@ ul.list-unstyled li a {
     background-color: rgba(0,0,0, 0.9);
     overflow-x: hidden;
     transition: 0.5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .overlay-content {
-    position: relative;
-    top: 25%;
-    width: 100%;
     text-align: center;
-    margin-top: 30px;
 }
 
 .overlay-content a {
     padding: 8px;
     text-decoration: none;
-    font-size: 36px;
+    font-size: 36px; 
     color: #818181;
-    display: block;
+    display: inline-block;
     transition: 0.3s;
-}
-
-.overlay-content a img {
-    width: 60px;
-    height: auto;
-}
-
-.selected-flag {
-    width: 30px;
-    height: auto;
+    margin: 20px 10px;
 }

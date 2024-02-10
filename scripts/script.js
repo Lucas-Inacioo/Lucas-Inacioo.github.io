@@ -26,7 +26,11 @@ async function changeLanguage(lang) {
 
 function toggleLanguageOverlay() {
     var overlay = document.getElementById("languageOverlay");
-    overlay.style.width = (overlay.style.width === "100%") ? "0" : "100%";
+    if (overlay.style.width === "100%") {
+        overlay.style.width = "0%";
+    } else {
+        overlay.style.width = "100%";
+    }
 }
 
 function updateLanguageSelectorFlag(lang) {
