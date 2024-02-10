@@ -16,11 +16,18 @@
                     <li><a href="index.html" data-i18n="home_button"></a></li>
                     <li><a href="projects.html" data-i18n="projects_button"></a></li>
                     <li><a href="about.html" data-i18n="about_me_button"></a></li>
-                    <li><a href="index.html" onclick="changeLanguage('en')">English</a></li>
-                    <li><a href="index.html" onclick="changeLanguage('pt')">Portuguese</a></li>
-
+                    <div class="language-selector" onclick="toggleLanguageOverlay()">
+                        <img src="./assets/images/us_flag.png" alt="Selected Language" class="selected-flag">
+                    </div>
                 </ul>
             </nav>
+        </div>
+    </div>
+
+    <div id="languageOverlay" class="language-overlay">
+        <div class="overlay-content">
+            <a href="#" onclick="changeLanguage('en')"><img src="./assets/images/us_flag.png" alt="English"></a>
+            <a href="#" onclick="changeLanguage('pt')"><img src="./assets/images/br_flag.png" alt="Português"></a>
         </div>
     </div>
     
@@ -32,7 +39,8 @@
     </div>
 
     <div class="fixed-footer text-center"> 
-        <p><a class="number">2024</a> My GitHub Profile.</p>
+        <a class="number">2024</a>
+        <p data-i18n="footer_text"></p>
     </div>
 
     <script src="./scripts/script.js"></script> 
